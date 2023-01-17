@@ -8,5 +8,6 @@ App("Sal", "(100 / 100)", "pass");
 //IIFE arrow function
 
 (()=>{
-    console.log("Hello! Vivek")
+  let a = "VA";
+    console.log("Hello! Vivek", a)
 })()
