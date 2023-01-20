@@ -1,0 +1,16 @@
+//JavaScript
+
+Q1. What are the different types of inheritence?
+Answer: 1) Class Inheritance 
+
+1) Prototypal Inheritance - Add properties and methods to existing object. 
+2) Pseudoclassical Inheritance - 
+3) Functional Inheritance
+
+Q2. Explain Singly Linked List in short.
+Answer: Singly linked lists (sometimes known as single linked lists) provide a way of storing data in order. They’re similar to arrays and, therefore, often get compared with one another.
+Basically singly linked list consists of nodes as items in arrays. These nodes include two things: value and pointer properties, and every pointer refers to another node.
+
+Q3. Sorting
+
+The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
