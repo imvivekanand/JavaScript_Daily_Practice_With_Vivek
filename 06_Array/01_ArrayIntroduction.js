@@ -15,6 +15,8 @@ console.log(Array2[3]);
 
 console.log(Array1);
 
+console.log(Array1[3]['eight']);
+
 
 //length
 console.log(Array1.length);
