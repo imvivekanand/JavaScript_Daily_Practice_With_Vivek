@@ -5,6 +5,10 @@ for (let x = 0; x < 7; x++) {
   const pet = "billa" + x;
   billa.push(pet);
 }
-console.clear;
+for (let x = 0; x<2; x++) {
+  //   cat[billa.length] = "billa" + x;
+  const angrypet = billa.pop();
+  console.log('run away: ' + angrypet);
+}
 console.log(billa);
 console.log(cat);
