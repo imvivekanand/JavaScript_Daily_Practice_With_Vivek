@@ -14,6 +14,8 @@ let mixtureArray = [
     Ritik: "Roshan",
     Wadle: "Don",
   },
+  08,
+  08,
 ];
 
 let val = mixtureArray.toString();
@@ -29,8 +31,17 @@ let stringWalaArray = ["Vivek", "Anand", "WEB3", "JavaScript", "React"];
 
 val = stringWalaArray.join("{|Ye Hai Mera wala Saperator|/}");
 val = stringWalaArray.concat(mixtureArray);
-val=stringWalaArray.includes("React")
-val=stringWalaArray.indexOf("React")
-val=Array.isArray(stringWalaArray);
+val = stringWalaArray.includes("React");
+val = stringWalaArray.indexOf("React");
+
+val = Array.isArray(stringWalaArray);
+
+val = mixtureArray.lastIndexOf(08);
+
+stringWalaArray.sort();
+stringWalaArray.reverse();
+console.log(stringWalaArray);
+
+
 
 console.log(val);
