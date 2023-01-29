@@ -9,8 +9,8 @@ function test1(){
 
 //Event loop checks call stack - 
 
-const one = () => console.log('one'); //4
-const two = () => console.log('two'); //6
+const one = () => console.log('one'); //4  //6
+const two = () => console.log('two'); //6 //5
 
 const test2 = () => {
     console.log('three'); //2
@@ -20,8 +20,8 @@ const test2 = () => {
 
 const test3 = () => {
     console.log('three'); //2
-    setTimeout (one, 0); //3
-    two(); //5
+    setTimeout (one, 0); //3 starts timer
+    two(); //4
 }
 
 test3(); //1
