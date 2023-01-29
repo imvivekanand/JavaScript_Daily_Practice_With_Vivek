@@ -27,3 +27,35 @@ eEmitter.on(`event`, (a, b) => {
 });
 
 eEmitter.emit("event", `a`, `b`);
+
+let m = 0;
+
+eEmitter.on("event4", () => {
+  console.log(++m);
+});
+
+eEmitter.emit("event4");
+eEmitter.emit("event4");
+
+
+eEmitter.on("event1", (a, b) => {
+  setImmediate(() => {
+    console.log(`1 Async ${a} ${b}`);
+  });
+});
+eEmitter.on("event2", (a, b) => {
+  console.log(`2 Sync ${a} ${b}`);
+});
+
+eEmitter.once('event3',()=>{
+    console.log('Once Run');
+})
+
+for (let x = 0; x < 4; x++) {
+  eEmitter.emit("event1", x, "b1");
+  eEmitter.emit("event2", x, "b2");
+  eEmitter.emit('event3');
+}
+
+eEmitter.emit("event4");
+eEmitter.emit("event4");
