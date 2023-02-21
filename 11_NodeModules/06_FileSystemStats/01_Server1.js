@@ -15,4 +15,24 @@ http.createServer((req, res)=>{
         return res.end();
     })
     console.log('server running');
-}).listen(8080)
+}).listen(8080);
+
+const rs = fs.createReadStream(url);
+rs.on('open', (e)=>{
+    console.log('File is open');
+    let val = '<br>Opened';
+    updateFile(val);
+})
+
+function updateFile(val){
+    fs.appendFile(url, val, (err)=>{
+        if(err) throw err;
+        console.log("updated file")
+    })
+}
+
+fs.stat(url,(err,stats)=>{
+    console.log(stats.isFile());
+    console.log(stats.isDirectory());
+    console.log(stats.size);
+})
