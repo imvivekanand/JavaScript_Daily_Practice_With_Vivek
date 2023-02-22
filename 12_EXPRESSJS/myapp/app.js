@@ -18,6 +18,32 @@ app.get("/test", (req, res) => {
   res.send("<h1>Test</h1>");
 });
 
+app.get("/info", (req, res) => {
+  res.send("<h1>Info</h1>");
+});
+
+//Pattern match
+app.get("/ab?cd", (req, res) => {
+  res.send("<h1>ABC</h1>");
+});
+
+app.get("/ab*de", (req, res) => {
+  res.send("<h1>AB__________DE</h1>");
+});
+
+
+
+//reg exp
+app.get(/z/, (req, res) => {
+  res.send("<h1>AB__________DE</h1>");
+});
+
+//route parameters
+app.get('/users/:id/:val', (req, res)=>{
+  res.send(req.params)
+  console.log(req.params.id);
+})
+
 app.listen(port, () => {
   console.log(`Ready listening on ${port}`);
 });
