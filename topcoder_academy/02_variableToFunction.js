@@ -7,3 +7,6 @@ function processArg(num) {
 
 processed = processArg(7)
 console.log(processed)
+
+let arr = [1,2,3,4];
+console.log(arr.shift())
